@@ -169,9 +169,11 @@ export const Footer: React.FC<FooterProps> = ({onBackToTop, onReplayCover}) => {
           </button>
         </div>
 
-        <LotusMedallion className="w-6 h-6 md:w-7 md:h-7 text-[#C6A36A]/65 mt-6 mb-2" />
+        <div data-footer-stagger className="mt-6 mb-2">
+          <LotusMedallion className="w-6 h-6 md:w-7 md:h-7 text-[#C6A36A]/65" />
+        </div>
 
-        <p className="font-body italic text-xs md:text-sm text-[#352720]/60">
+        <p data-footer-stagger className="font-body italic text-xs md:text-sm text-[#352720]/60">
           {weddingConfig.credits}
         </p>
       </div>

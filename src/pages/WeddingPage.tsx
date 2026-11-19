@@ -61,10 +61,16 @@ export const WeddingPage: React.FC = () => {
   useEffect(() => {
     if (!websiteRevealed) return;
     refreshScrollTriggersSoon();
-    const timer = window.setTimeout(() => {
+    const timerEarly = window.setTimeout(() => {
       ScrollTrigger.refresh();
     }, 180);
-    return () => window.clearTimeout(timer);
+    const timerSettled = window.setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 800);
+    return () => {
+      window.clearTimeout(timerEarly);
+      window.clearTimeout(timerSettled);
+    };
   }, [websiteRevealed]);
 
   const handleRevealWebsite = useCallback(() => {

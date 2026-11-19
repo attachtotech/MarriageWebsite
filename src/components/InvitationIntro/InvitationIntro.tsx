@@ -72,7 +72,7 @@ export const InvitationIntro: React.FC<InvitationIntroProps> = ({
         tl.to(
           veilRef.current,
           {
-            opacity: 0.94,
+            opacity: 0.92,
             duration: 0.45,
             ease: 'sine.inOut',
             force3D: true,
@@ -260,12 +260,12 @@ export const InvitationIntro: React.FC<InvitationIntroProps> = ({
       return;
     }
 
-    // Begin deep burgundy veil & crest dissolve right as gatefold panels part
-    if (!hasShownPortalCrestRef.current && video.currentTime >= video.duration - 1.45) {
+    // Reveal the warm white/off-white interior and dark crest right as the gatefold doors part
+    if (!hasShownPortalCrestRef.current && video.currentTime >= video.duration - 1.35) {
       hasShownPortalCrestRef.current = true;
       if (veilRef.current && !reducedMotion) {
         gsap.to(veilRef.current, {
-          opacity: 0.72,
+          opacity: 0.56,
           duration: 0.85,
           ease: 'sine.inOut',
           force3D: true,
@@ -422,24 +422,24 @@ export const InvitationIntro: React.FC<InvitationIntroProps> = ({
                 }`}
               />
 
-              {/* Deep Burgundy #30121D Transition Veil as Gatefold Doors Open */}
+              {/* Warm Off-White / Ivory Interior Wash Only After Gatefold Doors Part */}
               <div
                 ref={veilRef}
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-[#30121D] opacity-0 will-change-[opacity]"
+                className="pointer-events-none absolute inset-0 bg-[#F7F0E5] opacity-0 will-change-[opacity]"
                 style={{
                   backgroundImage:
-                    'radial-gradient(circle at 50% 48%, rgba(66, 23, 36, 0.92) 0%, rgba(48, 18, 29, 0.98) 65%, rgba(31, 16, 22, 1) 100%)',
+                    'radial-gradient(circle at 50% 48%, rgba(255, 252, 245, 0.62) 0%, rgba(247, 240, 229, 0.88) 60%, rgba(242, 235, 221, 0.96) 100%)',
                 }}
               />
 
-              {/* Luminous Champagne Calligraphy Crest Inside Opened Burgundy Doorway */}
+              {/* Dark Burgundy Calligraphy Crest on Warm Off-White Opened Interior */}
               <div
                 ref={portalCrestRef}
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 will-change-transform"
               >
-                <WeddingLogo variant="champagne" size="lg" className="drop-shadow-[0_4px_16px_rgba(16,4,8,0.85)]" />
+                <WeddingLogo variant="dark" size="lg" className="drop-shadow-[0_2px_10px_rgba(247,240,229,0.85)]" />
               </div>
 
               {/* Center Calligraphy Logo Seal Button */}
