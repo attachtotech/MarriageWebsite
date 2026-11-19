@@ -85,7 +85,7 @@ export const FinalInvitation: React.FC = () => {
     <section
       id="rsvp"
       ref={sectionRef}
-      className="relative bg-[#30121D] text-[#F4E9D5] py-14 sm:py-20 px-5 sm:px-8 overflow-hidden"
+      className="relative bg-[#30121D] text-[#F4E9D5] py-14 sm:py-20 md:py-24 px-5 sm:px-8 overflow-hidden"
     >
       <div ref={bgRef} className="absolute inset-0 will-change-transform">
         <EditorialImage
@@ -101,40 +101,40 @@ export const FinalInvitation: React.FC = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-2xl mx-auto">
+      <div className="relative z-10 max-w-2xl md:max-w-3xl mx-auto">
         <div
           ref={plaqueRef}
-          className="relative bg-[#30121D]/82 border border-[#C6A36A]/65 px-5 sm:px-9 py-7 sm:py-10 text-center mb-8"
+          className="relative bg-[#30121D]/82 border border-[#C6A36A]/65 px-5 sm:px-9 md:px-12 py-7 sm:py-10 md:py-12 text-center mb-8 md:mb-10"
         >
           <CornerFlourish
             position="tl"
-            className="pointer-events-none absolute top-1.5 left-1.5 w-7 h-7 text-[#D9BD8B]/75"
+            className="pointer-events-none absolute top-1.5 left-1.5 w-7 h-7 md:w-9 md:h-9 text-[#D9BD8B]/75"
           />
           <CornerFlourish
             position="tr"
-            className="pointer-events-none absolute top-1.5 right-1.5 w-7 h-7 text-[#D9BD8B]/75"
+            className="pointer-events-none absolute top-1.5 right-1.5 w-7 h-7 md:w-9 md:h-9 text-[#D9BD8B]/75"
           />
           <CornerFlourish
             position="bl"
-            className="pointer-events-none absolute bottom-1.5 left-1.5 w-7 h-7 text-[#D9BD8B]/75"
+            className="pointer-events-none absolute bottom-1.5 left-1.5 w-7 h-7 md:w-9 md:h-9 text-[#D9BD8B]/75"
           />
           <CornerFlourish
             position="br"
-            className="pointer-events-none absolute bottom-1.5 right-1.5 w-7 h-7 text-[#D9BD8B]/75"
+            className="pointer-events-none absolute bottom-1.5 right-1.5 w-7 h-7 md:w-9 md:h-9 text-[#D9BD8B]/75"
           />
 
-          <LotusMedallion className="w-8 h-8 mx-auto text-[#D9BD8B] mb-2.5" />
+          <LotusMedallion className="w-8 h-8 md:w-10 md:h-10 mx-auto text-[#D9BD8B] mb-2.5 md:mb-3.5" />
 
           <h2 className="font-display italic type-section font-normal text-[#F7F0E5] text-balance leading-snug">
             “{weddingConfig.closingHeadline}”
           </h2>
 
-          <OrnamentalDivider className="my-4" variant="gold" />
+          <OrnamentalDivider className="my-4 md:my-5" variant="gold" />
 
           <div aria-label={`${weddingConfig.brideName} & ${weddingConfig.groomName}`}>
             <WeddingLogo variant="champagne" size="lg" />
           </div>
-          <p className="mt-1.5 font-ui text-[10px] tracking-[0.22em] uppercase text-[#F4E9D5]/80">
+          <p className="mt-1.5 md:mt-2 font-ui text-[10px] md:text-xs tracking-[0.22em] uppercase text-[#F4E9D5]/80">
             {weddingConfig.displayDate} · {weddingConfig.venueName}
           </p>
         </div>

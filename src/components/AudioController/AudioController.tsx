@@ -168,7 +168,7 @@ export const AudioController: React.FC<AudioControllerProps> = ({
   return (
     <div
       ref={wrapRef}
-      className="fixed bottom-4 right-4 z-30 flex items-center gap-2 bg-[#F8F5EC]/95 text-[#651E2B] border border-[#C59A52] px-2.5 py-1.5 shadow-md"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-30 flex items-center gap-2 bg-[#F8F5EC]/95 text-[#651E2B] border border-[#C59A52] px-2.5 py-1.5 md:px-3.5 md:py-2 shadow-md"
       aria-label="Wedding soundtrack controls"
     >
       <button
@@ -177,13 +177,13 @@ export const AudioController: React.FC<AudioControllerProps> = ({
         aria-label={isPlaying ? 'Pause ambient music' : 'Play ambient music'}
         className="min-w-[36px] min-h-[36px] inline-flex items-center justify-center hover:text-[#43131F] cursor-pointer"
       >
-        {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+        {isPlaying ? <Pause className="w-4 h-4 md:w-4.5 md:h-4.5" /> : <Play className="w-4 h-4 md:w-4.5 md:h-4.5" />}
       </button>
 
       <button
         type="button"
         onClick={() => setExpanded((prev) => !prev)}
-        className="inline-flex items-center gap-1.5 font-ui text-[10px] tracking-[0.18em] uppercase pr-1 cursor-pointer whitespace-nowrap"
+        className="inline-flex items-center gap-1.5 font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase pr-1 cursor-pointer whitespace-nowrap"
       >
         {isPlaying && !isMuted && !reducedMotion && (
           <span className="inline-flex items-end gap-[2px] h-3" aria-hidden="true">

@@ -11,30 +11,30 @@ const FamilyFrame: React.FC<{profile: FamilyProfile; side: 'left' | 'right'}> = 
 }) => (
   <article
     data-family-frame={side}
-    className="relative bg-[#F2EBDD]/70 border border-[#C59A52]/70 px-5 sm:px-8 pt-5 pb-7 text-center flex flex-col items-center shadow-sm"
+    className="relative bg-[#F2EBDD]/70 border border-[#C59A52]/70 px-5 sm:px-8 md:px-10 pt-5 md:pt-7 pb-7 md:pb-9 text-center flex flex-col items-center shadow-sm"
   >
     <div className="pointer-events-none absolute inset-2 border border-[#651E2B]/20" aria-hidden="true" />
 
-    <div className="relative z-10 w-full max-w-[180px] text-[#C59A52] mb-2">
-      <JharokhaArchTop className="w-full h-7" />
+    <div className="relative z-10 w-full max-w-[180px] md:max-w-[220px] text-[#C59A52] mb-2 md:mb-3">
+      <JharokhaArchTop className="w-full h-7 md:h-9" />
     </div>
 
-    <p className="relative z-10 font-ui text-[10px] tracking-[0.22em] uppercase text-[#651E2B]">
+    <p className="relative z-10 font-ui text-[10px] md:text-xs tracking-[0.22em] uppercase text-[#651E2B]">
       {profile.title}
     </p>
     <h3 className="relative z-10 mt-1 font-display type-subheading font-medium text-[#651E2B]">
       {profile.familySurname}
     </h3>
-    <p className="relative z-10 mt-0.5 font-body italic text-sm text-[#C59A52]">
+    <p className="relative z-10 mt-0.5 font-body italic text-sm md:text-base text-[#C59A52]">
       {profile.city}
     </p>
 
-    <OrnamentalDivider className="w-full my-3.5" variant="gold" />
+    <OrnamentalDivider className="w-full my-3.5 md:my-4" variant="gold" />
 
-    <div className="relative z-10 space-y-3 w-full max-w-sm">
+    <div className="relative z-10 space-y-3 md:space-y-4 w-full max-w-sm">
       {profile.groups.map((group) => (
         <div key={group.heading}>
-          <p className="font-ui text-[10px] tracking-[0.18em] uppercase text-[#352720]/65">
+          <p className="font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase text-[#352720]/65">
             {group.heading}
           </p>
           <div className="mt-0.5 space-y-0.5">
@@ -48,9 +48,9 @@ const FamilyFrame: React.FC<{profile: FamilyProfile; side: 'left' | 'right'}> = 
       ))}
     </div>
 
-    <LotusMedallion className="relative z-10 w-6 h-6 text-[#C59A52] my-3.5" />
+    <LotusMedallion className="relative z-10 w-6 h-6 md:w-8 md:h-8 text-[#C59A52] my-3.5 md:my-4" />
 
-    <p className="relative z-10 font-body italic text-sm text-[#352720]/80 max-w-xs leading-relaxed">
+    <p className="relative z-10 font-body italic text-sm md:text-base text-[#352720]/80 max-w-xs md:max-w-sm leading-relaxed">
       “{profile.blessingQuote}”
     </p>
   </article>
@@ -145,17 +145,17 @@ export const Family: React.FC = () => {
     <section
       id="family"
       ref={sectionRef}
-      className="relative bg-[#F8F5EC] text-[#352720] py-14 sm:py-20 px-5 sm:px-8 paper-grain overflow-hidden"
+      className="relative bg-[#F8F5EC] text-[#352720] py-14 sm:py-20 md:py-24 px-5 sm:px-8 paper-grain overflow-hidden"
     >
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <div ref={headingRef} className="text-center max-w-lg mx-auto mb-9 sm:mb-12">
+      <div className="relative z-10 max-w-4xl lg:max-w-5xl mx-auto">
+        <div ref={headingRef} className="text-center max-w-lg md:max-w-xl mx-auto mb-9 sm:mb-12 md:mb-14">
           <h2 className="font-display type-section font-medium text-[#651E2B]">
             Our Families
           </h2>
           <OrnamentalDivider className="my-3.5" variant="gold" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-stretch">
           <FamilyFrame profile={weddingConfig.brideFamily} side="left" />
           <FamilyFrame profile={weddingConfig.groomFamily} side="right" />
         </div>

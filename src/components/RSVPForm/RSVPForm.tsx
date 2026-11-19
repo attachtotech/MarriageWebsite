@@ -112,11 +112,11 @@ export const RSVPForm: React.FC = () => {
     return (
       <div
         ref={confirmRef}
-        className="bg-[#F8F5EC] text-[#352720] border border-[#C59A52] px-5 sm:px-8 py-7 text-center relative"
+        className="bg-[#F8F5EC] text-[#352720] border border-[#C59A52] px-5 sm:px-8 md:px-10 py-7 md:py-9 text-center relative"
       >
         <div className="pointer-events-none absolute inset-2 border border-[#651E2B]/20" aria-hidden="true" />
-        <div className="relative z-10 max-w-md mx-auto">
-          <CheckCircle2 className="w-8 h-8 text-[#651E2B] mx-auto mb-2.5" aria-hidden="true" />
+        <div className="relative z-10 max-w-md md:max-w-lg mx-auto">
+          <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10 text-[#651E2B] mx-auto mb-2.5" aria-hidden="true" />
           <h3 className="font-display type-section text-[#651E2B]">
             {submittedRecord.attendance === 'attending'
               ? `We Await You, ${submittedRecord.guestName}`
@@ -132,22 +132,22 @@ export const RSVPForm: React.FC = () => {
               : 'Your warm wishes have been saved.'}
           </p>
 
-          <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-2.5">
+          <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-2.5 md:gap-3.5">
             <a
               href={getGoogleCalendarUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto min-h-[40px] inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#651E2B] hover:bg-[#43131F] text-[#F8F5EC] border border-[#C59A52] font-ui text-[10px] tracking-[0.16em] uppercase transition-colors whitespace-nowrap"
+              className="w-full sm:w-auto min-h-[40px] md:min-h-[44px] inline-flex items-center justify-center gap-2 px-4 py-2 md:px-6 md:py-2.5 bg-[#651E2B] hover:bg-[#43131F] text-[#F8F5EC] border border-[#C59A52] font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase transition-colors whitespace-nowrap"
             >
-              <CalendarPlus className="w-3.5 h-3.5 text-[#D8B77C]" aria-hidden="true" />
+              <CalendarPlus className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#D8B77C]" aria-hidden="true" />
               <span>Google Calendar</span>
             </a>
             <button
               type="button"
               onClick={downloadIcsCalendar}
-              className="w-full sm:w-auto min-h-[40px] inline-flex items-center justify-center gap-2 px-4 py-2 border border-[#651E2B]/45 text-[#651E2B] hover:bg-[#EAE0CF] font-ui text-[10px] tracking-[0.16em] uppercase transition-colors cursor-pointer whitespace-nowrap"
+              className="w-full sm:w-auto min-h-[40px] md:min-h-[44px] inline-flex items-center justify-center gap-2 px-4 py-2 md:px-6 md:py-2.5 border border-[#651E2B]/45 text-[#651E2B] hover:bg-[#EAE0CF] font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase transition-colors cursor-pointer whitespace-nowrap"
             >
-              <Download className="w-3.5 h-3.5" aria-hidden="true" />
+              <Download className="w-3.5 h-3.5 md:w-4 md:h-4" aria-hidden="true" />
               <span>Download .ICS</span>
             </button>
           </div>
@@ -155,9 +155,9 @@ export const RSVPForm: React.FC = () => {
           <button
             type="button"
             onClick={resetSubmission}
-            className="mt-4 inline-flex items-center gap-1.5 font-body italic text-sm text-[#651E2B]/80 hover:text-[#651E2B] cursor-pointer"
+            className="mt-4 inline-flex items-center gap-1.5 font-body italic text-sm md:text-base text-[#651E2B]/80 hover:text-[#651E2B] cursor-pointer"
           >
-            <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
+            <RotateCcw className="w-3.5 h-3.5 md:w-4 md:h-4" aria-hidden="true" />
             <span>Update response</span>
           </button>
         </div>
@@ -170,13 +170,13 @@ export const RSVPForm: React.FC = () => {
       ref={formRef}
       onSubmit={handleSubmit}
       noValidate
-      className="bg-[#F8F5EC] text-[#352720] border border-[#C59A52] px-5 sm:px-8 py-6 sm:py-8 relative shadow-lg"
+      className="bg-[#F8F5EC] text-[#352720] border border-[#C59A52] px-5 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 relative shadow-lg"
     >
       <div className="pointer-events-none absolute inset-2 border border-[#651E2B]/20" aria-hidden="true" />
 
       <div className="relative z-10">
-        <div data-rsvp-row className="text-center mb-5">
-          <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[#651E2B]">
+        <div data-rsvp-row className="text-center mb-5 md:mb-6">
+          <p className="font-ui text-[10px] md:text-xs tracking-[0.22em] uppercase text-[#651E2B]">
             Kindly Reply by {weddingConfig.rsvpDeadline}
           </p>
           <h3 className="mt-1 font-display type-section font-medium text-[#651E2B]">
@@ -193,11 +193,11 @@ export const RSVPForm: React.FC = () => {
           </div>
         )}
 
-        <div data-rsvp-row className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+        <div data-rsvp-row className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 md:gap-5">
           <div>
             <label
               htmlFor="rsvp-name"
-              className="block font-ui text-[10px] tracking-[0.16em] uppercase text-[#651E2B] mb-1"
+              className="block font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase text-[#651E2B] mb-1 md:mb-1.5"
             >
               Guest Name *
             </label>
@@ -208,14 +208,14 @@ export const RSVPForm: React.FC = () => {
               value={guestName}
               onChange={(e) => setGuestName(e.target.value)}
               placeholder="Full name"
-              className="w-full min-h-[40px] px-3 py-2 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
+              className="w-full min-h-[40px] md:min-h-[46px] px-3 py-2 md:px-4 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
             />
           </div>
 
           <div>
             <label
               htmlFor="rsvp-contact"
-              className="block font-ui text-[10px] tracking-[0.16em] uppercase text-[#651E2B] mb-1"
+              className="block font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase text-[#651E2B] mb-1 md:mb-1.5"
             >
               Email or Phone *
             </label>
@@ -226,19 +226,19 @@ export const RSVPForm: React.FC = () => {
               value={contact}
               onChange={(e) => setContact(e.target.value)}
               placeholder="Email or mobile number"
-              className="w-full min-h-[40px] px-3 py-2 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
+              className="w-full min-h-[40px] md:min-h-[46px] px-3 py-2 md:px-4 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
             />
           </div>
 
           <div>
-            <span className="block font-ui text-[10px] tracking-[0.16em] uppercase text-[#651E2B] mb-1">
+            <span className="block font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase text-[#651E2B] mb-1 md:mb-1.5">
               Attendance *
             </span>
             <div className="grid grid-cols-2 gap-2">
               <button
                 type="button"
                 onClick={() => setAttendance('attending')}
-                className={`min-h-[40px] px-2 py-1.5 border font-ui text-[10px] tracking-[0.08em] uppercase transition-colors cursor-pointer whitespace-nowrap ${
+                className={`min-h-[40px] md:min-h-[46px] px-2 py-1.5 border font-ui text-[10px] md:text-[11px] tracking-[0.08em] uppercase transition-colors cursor-pointer whitespace-nowrap ${
                   attendance === 'attending'
                     ? 'bg-[#651E2B] text-[#F8F5EC] border-[#651E2B]'
                     : 'bg-[#FFFFFF] text-[#352720] border-[#C59A52]/60 hover:border-[#651E2B]'
@@ -249,7 +249,7 @@ export const RSVPForm: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setAttendance('declining')}
-                className={`min-h-[40px] px-2 py-1.5 border font-ui text-[10px] tracking-[0.08em] uppercase transition-colors cursor-pointer whitespace-nowrap ${
+                className={`min-h-[40px] md:min-h-[46px] px-2 py-1.5 border font-ui text-[10px] md:text-[11px] tracking-[0.08em] uppercase transition-colors cursor-pointer whitespace-nowrap ${
                   attendance === 'declining'
                     ? 'bg-[#651E2B] text-[#F8F5EC] border-[#651E2B]'
                     : 'bg-[#FFFFFF] text-[#352720] border-[#C59A52]/60 hover:border-[#651E2B]'
@@ -263,7 +263,7 @@ export const RSVPForm: React.FC = () => {
           <div>
             <label
               htmlFor="rsvp-guests"
-              className="block font-ui text-[10px] tracking-[0.16em] uppercase text-[#651E2B] mb-1"
+              className="block font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase text-[#651E2B] mb-1 md:mb-1.5"
             >
               Guests
             </label>
@@ -272,7 +272,7 @@ export const RSVPForm: React.FC = () => {
               disabled={attendance === 'declining'}
               value={attendance === 'declining' ? 0 : guestCount}
               onChange={(e) => setGuestCount(Number(e.target.value))}
-              className="w-full min-h-[40px] px-3 py-2 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body disabled:opacity-50 focus:border-[#651E2B] focus:outline-none"
+              className="w-full min-h-[40px] md:min-h-[46px] px-3 py-2 md:px-4 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body disabled:opacity-50 focus:border-[#651E2B] focus:outline-none"
             >
               {attendance === 'declining' ? (
                 <option value={0}>0 Guests</option>
@@ -288,17 +288,17 @@ export const RSVPForm: React.FC = () => {
         </div>
 
         {attendance === 'attending' && (
-          <div data-rsvp-row className="mt-4">
-            <span className="block font-ui text-[10px] tracking-[0.16em] uppercase text-[#651E2B] mb-1.5">
+          <div data-rsvp-row className="mt-4 md:mt-5">
+            <span className="block font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase text-[#651E2B] mb-1.5">
               Events Attending *
             </span>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-2.5">
               {weddingEvents.map((ev) => {
                 const checked = selectedEvents.includes(ev.name);
                 return (
                   <label
                     key={ev.id}
-                    className={`min-h-[40px] flex items-center gap-2 px-2.5 py-1.5 border cursor-pointer transition-colors ${
+                    className={`min-h-[40px] md:min-h-[44px] flex items-center gap-2 px-2.5 md:px-3 py-1.5 border cursor-pointer transition-colors ${
                       checked
                         ? 'bg-[#EAE0CF]/70 border-[#651E2B] text-[#651E2B]'
                         : 'bg-[#FFFFFF] border-[#C59A52]/50 text-[#352720]/80'
@@ -308,9 +308,9 @@ export const RSVPForm: React.FC = () => {
                       type="checkbox"
                       checked={checked}
                       onChange={() => toggleEvent(ev.name)}
-                      className="accent-[#651E2B] w-3.5 h-3.5 shrink-0"
+                      className="accent-[#651E2B] w-3.5 h-3.5 md:w-4 md:h-4 shrink-0"
                     />
-                    <span className="font-body text-sm leading-tight">{ev.name}</span>
+                    <span className="font-body text-sm md:text-base leading-tight">{ev.name}</span>
                   </label>
                 );
               })}
@@ -318,11 +318,11 @@ export const RSVPForm: React.FC = () => {
           </div>
         )}
 
-        <div data-rsvp-row className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+        <div data-rsvp-row className="mt-4 md:mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 md:gap-5">
           <div>
             <label
               htmlFor="rsvp-dietary"
-              className="block font-ui text-[10px] tracking-[0.16em] uppercase text-[#651E2B] mb-1"
+              className="block font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase text-[#651E2B] mb-1 md:mb-1.5"
             >
               Dietary Preference
             </label>
@@ -330,7 +330,7 @@ export const RSVPForm: React.FC = () => {
               id="rsvp-dietary"
               value={dietary}
               onChange={(e) => setDietary(e.target.value)}
-              className="w-full min-h-[40px] px-3 py-2 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
+              className="w-full min-h-[40px] md:min-h-[46px] px-3 py-2 md:px-4 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
             >
               {DIETARY_OPTIONS.map((opt) => (
                 <option key={opt} value={opt}>
@@ -343,7 +343,7 @@ export const RSVPForm: React.FC = () => {
           <div>
             <label
               htmlFor="rsvp-message"
-              className="block font-ui text-[10px] tracking-[0.16em] uppercase text-[#651E2B] mb-1"
+              className="block font-ui text-[10px] md:text-xs tracking-[0.16em] uppercase text-[#651E2B] mb-1 md:mb-1.5"
             >
               Blessings or Note
             </label>
@@ -353,16 +353,16 @@ export const RSVPForm: React.FC = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Warm wishes or flight arrival"
-              className="w-full min-h-[40px] px-3 py-2 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
+              className="w-full min-h-[40px] md:min-h-[46px] px-3 py-2 md:px-4 bg-[#FFFFFF] border border-[#C59A52]/65 text-[#352720] font-body type-body focus:border-[#651E2B] focus:outline-none"
             />
           </div>
         </div>
 
-        <div data-rsvp-row className="mt-6 text-center">
+        <div data-rsvp-row className="mt-6 md:mt-7 text-center">
           <button
             type="submit"
             disabled={submitting}
-            className="w-full sm:w-auto min-h-[42px] px-8 py-2.5 bg-[#651E2B] hover:bg-[#43131F] disabled:opacity-60 text-[#F8F5EC] border border-[#C59A52] font-ui text-[11px] tracking-[0.2em] uppercase transition-colors cursor-pointer whitespace-nowrap"
+            className="w-full sm:w-auto min-h-[42px] md:min-h-[48px] px-8 py-2.5 md:px-10 md:py-3 bg-[#651E2B] hover:bg-[#43131F] disabled:opacity-60 text-[#F8F5EC] border border-[#C59A52] font-ui text-[11px] md:text-xs tracking-[0.2em] uppercase transition-colors cursor-pointer whitespace-nowrap"
           >
             {submitting ? 'Saving Response...' : 'Confirm RSVP'}
           </button>

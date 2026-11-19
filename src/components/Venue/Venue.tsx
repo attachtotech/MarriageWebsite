@@ -99,10 +99,10 @@ export const Venue: React.FC = () => {
     <section
       id="venue"
       ref={sectionRef}
-      className="relative bg-[#F8F5EC] text-[#352720] py-14 sm:py-20 px-5 sm:px-8 paper-grain"
+      className="relative bg-[#F8F5EC] text-[#352720] py-14 sm:py-20 md:py-24 px-5 sm:px-8 paper-grain"
     >
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <div ref={headingRef} className="text-center max-w-lg mx-auto mb-8 sm:mb-10">
+      <div className="relative z-10 max-w-4xl lg:max-w-5xl mx-auto">
+        <div ref={headingRef} className="text-center max-w-lg md:max-w-xl mx-auto mb-8 sm:mb-10 md:mb-12">
           <h2 className="font-display type-section font-medium text-[#651E2B]">
             {weddingConfig.venueName}
           </h2>
@@ -134,16 +134,16 @@ export const Venue: React.FC = () => {
 
           <div
             ref={plaqueRef}
-            className="relative z-10 max-w-xl mx-auto -mt-5 sm:-mt-10 bg-[#F8F5EC] border border-[#C59A52]/75 px-5 sm:px-8 py-6 sm:py-7 text-center shadow-md"
+            className="relative z-10 max-w-xl md:max-w-2xl mx-auto -mt-5 sm:-mt-10 md:-mt-12 bg-[#F8F5EC] border border-[#C59A52]/75 px-5 sm:px-8 md:px-10 py-6 sm:py-7 md:py-9 text-center shadow-md"
           >
             <div className="pointer-events-none absolute inset-1.5 border border-[#651E2B]/15" aria-hidden="true" />
 
             <div className="relative z-10 flex flex-col items-center">
-              <MapPin className="w-4 h-4 text-[#651E2B] mb-1.5" aria-hidden="true" />
-              <p className="font-body type-body text-[#352720]/90 max-w-md">
+              <MapPin className="w-4 h-4 md:w-5 md:h-5 text-[#651E2B] mb-1.5 md:mb-2" aria-hidden="true" />
+              <p className="font-body type-body text-[#352720]/90 max-w-md md:max-w-lg">
                 {weddingConfig.venueAddress}
               </p>
-              <p className="mt-1.5 font-ui text-[10px] tracking-[0.18em] uppercase text-[#651E2B]/80">
+              <p className="mt-1.5 md:mt-2 font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase text-[#651E2B]/80">
                 February 12 – 14, 2027 · Check-in 12:00 PM
               </p>
 
@@ -151,10 +151,10 @@ export const Venue: React.FC = () => {
                 href={weddingConfig.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 min-h-[40px] inline-flex items-center justify-center gap-2 px-5 py-2 bg-[#651E2B] hover:bg-[#43131F] text-[#F8F5EC] border border-[#C59A52]/70 font-ui text-[11px] tracking-[0.16em] uppercase transition-colors whitespace-nowrap"
+                className="mt-4 md:mt-5 min-h-[40px] md:min-h-[46px] inline-flex items-center justify-center gap-2 px-5 py-2 md:px-7 md:py-2.5 bg-[#651E2B] hover:bg-[#43131F] text-[#F8F5EC] border border-[#C59A52]/70 font-ui text-[11px] md:text-xs tracking-[0.16em] uppercase transition-colors whitespace-nowrap"
               >
                 <span>Open in Google Maps</span>
-                <ExternalLink className="w-3.5 h-3.5 text-[#D8B77C]" aria-hidden="true" />
+                <ExternalLink className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#D8B77C]" aria-hidden="true" />
               </a>
             </div>
           </div>

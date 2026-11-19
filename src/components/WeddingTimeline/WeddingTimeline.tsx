@@ -123,10 +123,10 @@ export const WeddingTimeline: React.FC = () => {
     <section
       id="timeline"
       ref={sectionRef}
-      className="relative bg-[#F8F5EC] text-[#352720] py-14 sm:py-20 px-5 sm:px-8 paper-grain stationery-motif"
+      className="relative bg-[#F8F5EC] text-[#352720] py-14 sm:py-20 md:py-24 px-5 sm:px-8 paper-grain stationery-motif"
     >
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <div ref={headingRef} data-timeline-heading className="text-center max-w-lg mx-auto mb-10 sm:mb-14">
+      <div className="relative z-10 max-w-4xl lg:max-w-5xl mx-auto">
+        <div ref={headingRef} data-timeline-heading className="text-center max-w-lg md:max-w-xl mx-auto mb-10 sm:mb-14 md:mb-16">
           <h2 className="font-display type-section font-medium text-[#651E2B]">
             Wedding Events
           </h2>
@@ -156,7 +156,7 @@ export const WeddingTimeline: React.FC = () => {
             aria-hidden="true"
           />
 
-          <div className="space-y-8 sm:space-y-11">
+          <div className="space-y-8 sm:space-y-11 md:space-y-14">
             {weddingEvents.map((event, index) => {
               const isLeft = index % 2 === 0;
               return (
@@ -168,17 +168,17 @@ export const WeddingTimeline: React.FC = () => {
                   }`}
                 >
                   <div
-                    className={`w-full md:w-[calc(50%-2rem)] pl-10 md:pl-0 ${
-                      isLeft ? 'md:text-right md:pr-3' : 'md:text-left md:pl-3'
+                    className={`w-full md:w-[calc(50%-2.5rem)] pl-10 md:pl-0 ${
+                      isLeft ? 'md:text-right md:pr-4' : 'md:text-left md:pl-4'
                     }`}
                   >
                     <div
-                      className={`inline-flex items-center gap-2.5 mb-1 text-[#C59A52] ${
+                      className={`inline-flex items-center gap-2.5 md:gap-3 mb-1.5 text-[#C59A52] ${
                         isLeft ? 'md:flex-row-reverse' : ''
                       }`}
                     >
-                      <EventMotifIllustration motif={event.motif} className="w-8 h-8 text-[#651E2B]" />
-                      <span className="font-ui text-[10px] tracking-[0.2em] uppercase text-[#651E2B]/80">
+                      <EventMotifIllustration motif={event.motif} className="w-8 h-8 md:w-10 md:h-10 text-[#651E2B]" />
+                      <span className="font-ui text-[10px] md:text-xs tracking-[0.2em] uppercase text-[#651E2B]/85">
                         {event.dayLabel}
                       </span>
                     </div>
@@ -188,18 +188,18 @@ export const WeddingTimeline: React.FC = () => {
                     </h3>
 
                     <p
-                      className={`mt-0.5 font-ui text-[11px] tracking-[0.12em] uppercase text-[#352720]/70 ${
+                      className={`mt-0.5 font-ui text-[11px] md:text-[13px] tracking-[0.12em] uppercase text-[#352720]/75 ${
                         isLeft ? 'md:text-right' : 'md:text-left'
                       }`}
                     >
                       {event.date} · {event.time}
                     </p>
 
-                    <p className="mt-1.5 font-body type-body text-[#352720]/85">
+                    <p className="mt-1.5 md:mt-2 font-body type-body text-[#352720]/85">
                       {event.description}
                     </p>
 
-                    <p className="mt-1 font-body italic text-xs sm:text-sm text-[#651E2B]/85">
+                    <p className="mt-1 md:mt-1.5 font-body italic text-xs sm:text-sm md:text-base text-[#651E2B]/85">
                       {event.venue}
                     </p>
                   </div>
@@ -210,9 +210,9 @@ export const WeddingTimeline: React.FC = () => {
                   >
                     <span
                       data-timeline-node
-                      className="w-2.5 h-2.5 rotate-45 bg-[#F8F5EC] border-[1.5px] border-[#651E2B] flex items-center justify-center"
+                      className="w-2.5 h-2.5 md:w-3 md:h-3 rotate-45 bg-[#F8F5EC] border-[1.5px] border-[#651E2B] flex items-center justify-center"
                     >
-                      <span className="w-1 h-1 bg-[#C59A52]" />
+                      <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-[#C59A52]" />
                     </span>
                   </div>
 

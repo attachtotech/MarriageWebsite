@@ -33,8 +33,8 @@ const HANGING_NODES: HangingNode[] = [
     id: 'hang-1',
     photoIndex: 0,
     item: galleryItems[0],
-    stringHeightClass: 'h-7 sm:h-10',
-    widthClass: 'w-[162px] sm:w-[215px]',
+    stringHeightClass: 'h-7 sm:h-10 md:h-12',
+    widthClass: 'w-[162px] sm:w-[215px] md:w-[250px] lg:w-[285px]',
     aspectClass: 'aspect-[3/4]',
     tiltDeg: -0.9,
   },
@@ -43,8 +43,8 @@ const HANGING_NODES: HangingNode[] = [
     id: 'hang-2',
     photoIndex: 1,
     item: galleryItems[1],
-    stringHeightClass: 'h-12 sm:h-16',
-    widthClass: 'w-[190px] sm:w-[250px]',
+    stringHeightClass: 'h-12 sm:h-16 md:h-20',
+    widthClass: 'w-[190px] sm:w-[250px] md:w-[290px] lg:w-[330px]',
     aspectClass: 'aspect-[4/3]',
     tiltDeg: 1.1,
   },
@@ -53,16 +53,16 @@ const HANGING_NODES: HangingNode[] = [
     id: 'hang-3',
     photoIndex: 2,
     item: galleryItems[2],
-    stringHeightClass: 'h-6 sm:h-9',
-    widthClass: 'w-[155px] sm:w-[205px]',
+    stringHeightClass: 'h-6 sm:h-9 md:h-11',
+    widthClass: 'w-[155px] sm:w-[205px] md:w-[240px] lg:w-[275px]',
     aspectClass: 'aspect-[3/4]',
     tiltDeg: -1.1,
   },
   {
     kind: 'invitation',
     id: 'hang-center-message',
-    stringHeightClass: 'h-10 sm:h-14',
-    widthClass: 'w-[185px] sm:w-[240px]',
+    stringHeightClass: 'h-10 sm:h-14 md:h-16',
+    widthClass: 'w-[185px] sm:w-[240px] md:w-[280px] lg:w-[320px]',
     tiltDeg: 0.7,
   },
   {
@@ -70,8 +70,8 @@ const HANGING_NODES: HangingNode[] = [
     id: 'hang-4',
     photoIndex: 3,
     item: galleryItems[3],
-    stringHeightClass: 'h-8 sm:h-11',
-    widthClass: 'w-[192px] sm:w-[252px]',
+    stringHeightClass: 'h-8 sm:h-11 md:h-14',
+    widthClass: 'w-[192px] sm:w-[252px] md:w-[292px] lg:w-[332px]',
     aspectClass: 'aspect-[4/3]',
     tiltDeg: -0.8,
   },
@@ -80,8 +80,8 @@ const HANGING_NODES: HangingNode[] = [
     id: 'hang-5',
     photoIndex: 4,
     item: galleryItems[4],
-    stringHeightClass: 'h-12 sm:h-16',
-    widthClass: 'w-[185px] sm:w-[240px]',
+    stringHeightClass: 'h-12 sm:h-16 md:h-20',
+    widthClass: 'w-[185px] sm:w-[240px] md:w-[280px] lg:w-[320px]',
     aspectClass: 'aspect-[4/3]',
     tiltDeg: 1.0,
   },
@@ -90,8 +90,8 @@ const HANGING_NODES: HangingNode[] = [
     id: 'hang-6',
     photoIndex: 5,
     item: galleryItems[5],
-    stringHeightClass: 'h-7 sm:h-10',
-    widthClass: 'w-[182px] sm:w-[235px]',
+    stringHeightClass: 'h-7 sm:h-10 md:h-12',
+    widthClass: 'w-[182px] sm:w-[235px] md:w-[275px] lg:w-[315px]',
     aspectClass: 'aspect-[4/3]',
     tiltDeg: -0.85,
   },
@@ -325,28 +325,28 @@ export const Gallery: React.FC = () => {
               </div>
 
               {/* Central Maroon Invitation Message Frame */}
-              <div className="relative w-full bg-gradient-to-b from-[#30121D] via-[#421724] to-[#1F1016] text-[#F4E9D5] border border-[#C6A36A] p-4 sm:p-6 text-center shadow-md">
+              <div className="relative w-full bg-gradient-to-b from-[#30121D] via-[#421724] to-[#1F1016] text-[#F4E9D5] border border-[#C6A36A] p-4 sm:p-6 md:p-7 text-center shadow-md">
                 <div
                   className="pointer-events-none absolute inset-1.5 border border-[#D9BD8B]/40"
                   aria-hidden="true"
                 />
                 <CornerFlourish
                   position="tl"
-                  className="pointer-events-none absolute top-1 left-1 w-4 h-4 text-[#D9BD8B]/70"
+                  className="pointer-events-none absolute top-1 left-1 w-4 h-4 md:w-5 md:h-5 text-[#D9BD8B]/70"
                 />
                 <CornerFlourish
                   position="br"
-                  className="pointer-events-none absolute bottom-1 right-1 w-4 h-4 text-[#D9BD8B]/70"
+                  className="pointer-events-none absolute bottom-1 right-1 w-4 h-4 md:w-5 md:h-5 text-[#D9BD8B]/70"
                 />
 
-                <LotusMedallion className="w-7 h-7 mx-auto text-[#D9BD8B] mb-2" />
-                <p className="font-ui text-[9px] tracking-[0.22em] uppercase text-[#D9BD8B]">
+                <LotusMedallion className="w-7 h-7 md:w-9 md:h-9 mx-auto text-[#D9BD8B] mb-2" />
+                <p className="font-ui text-[9px] md:text-[11px] tracking-[0.22em] uppercase text-[#D9BD8B]">
                   {weddingConfig.displayDate}
                 </p>
-                <h3 className="mt-1.5 font-display italic text-lg sm:text-2xl text-[#F7F0E5] leading-snug text-balance">
+                <h3 className="mt-1.5 font-display italic text-lg sm:text-2xl md:text-[1.7rem] text-[#F7F0E5] leading-snug text-balance">
                   “{weddingConfig.hangingGalleryQuote}”
                 </h3>
-                <div className="my-2.5 h-px w-10 mx-auto bg-[#D9BD8B]/45" aria-hidden="true" />
+                <div className="my-2.5 md:my-3 h-px w-10 md:w-14 mx-auto bg-[#D9BD8B]/45" aria-hidden="true" />
                 <WeddingLogo variant="champagne" size="sm" />
               </div>
             </div>
@@ -374,7 +374,7 @@ export const Gallery: React.FC = () => {
               aria-label={`View ${node.item.title}`}
               className="group w-full text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-[#C59A52]"
             >
-              <div className="relative bg-[#F8F5EC] p-2 sm:p-2.5 border border-[#651E2B]/40 shadow-md transition-transform duration-300 group-hover:-translate-y-0.5">
+              <div className="relative bg-[#F8F5EC] p-2 sm:p-2.5 md:p-3 border border-[#651E2B]/40 shadow-md transition-transform duration-300 group-hover:-translate-y-0.5">
                 <div
                   className="pointer-events-none absolute inset-1 border border-[#C59A52]/40"
                   aria-hidden="true"
@@ -389,7 +389,7 @@ export const Gallery: React.FC = () => {
                   />
                 </div>
               </div>
-              <p className="mt-2 text-center font-display italic text-sm sm:text-base text-[#651E2B] truncate px-1">
+              <p className="mt-2 md:mt-2.5 text-center font-display italic text-sm sm:text-base md:text-lg text-[#651E2B] truncate px-1">
                 {node.item.title}
               </p>
             </button>
@@ -403,10 +403,10 @@ export const Gallery: React.FC = () => {
     <section
       id="gallery"
       ref={sectionRef}
-      className="relative bg-[#F2EBDD] text-[#352720] py-14 sm:py-20 overflow-x-clip paper-grain"
+      className="relative bg-[#F2EBDD] text-[#352720] py-14 sm:py-20 md:py-24 overflow-x-clip paper-grain"
     >
       {/* Compact Header & Pause Control */}
-      <div ref={headingRef} className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 text-center mb-8 sm:mb-10">
+      <div ref={headingRef} className="relative z-10 max-w-5xl lg:max-w-6xl mx-auto px-5 sm:px-8 text-center mb-8 sm:mb-10 md:mb-12">
         <h2 className="font-display type-section font-medium text-[#651E2B]">
           Moments &amp; Portraits
         </h2>
@@ -417,16 +417,16 @@ export const Gallery: React.FC = () => {
             type="button"
             onClick={() => setIsPaused((prev) => !prev)}
             aria-pressed={isPaused}
-            className="mt-1 inline-flex items-center gap-2 min-h-[36px] px-3.5 py-1 border border-[#C59A52]/65 bg-[#F8F5EC]/80 hover:bg-[#F8F5EC] text-[#651E2B] font-ui text-[10px] tracking-[0.18em] uppercase transition-colors cursor-pointer whitespace-nowrap"
+            className="mt-1 inline-flex items-center gap-2 min-h-[36px] md:min-h-[42px] px-3.5 py-1 md:px-5 md:py-1.5 border border-[#C59A52]/65 bg-[#F8F5EC]/80 hover:bg-[#F8F5EC] text-[#651E2B] font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase transition-colors cursor-pointer whitespace-nowrap"
           >
             {isPaused ? (
               <>
-                <Play className="w-3 h-3" aria-hidden="true" />
+                <Play className="w-3 h-3 md:w-3.5 md:h-3.5" aria-hidden="true" />
                 <span>Resume Gallery</span>
               </>
             ) : (
               <>
-                <Pause className="w-3 h-3" aria-hidden="true" />
+                <Pause className="w-3 h-3 md:w-3.5 md:h-3.5" aria-hidden="true" />
                 <span>Pause Gallery</span>
               </>
             )}

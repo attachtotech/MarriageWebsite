@@ -60,23 +60,23 @@ export const MarriageArchCrown: React.FC<{className?: string}> = ({
         strokeDasharray="3 3"
       />
 
-      {/* Subtle Marigold, Jasmine & Crimson Garland Beads Along Toran */}
+      {/* Subtle Marigold, Spun Gold & Crimson Garland Beads Along Toran */}
       {[
         {cx: 48, cy: 73, r: 3.4, fill: '#D99B38'},
-        {cx: 68, cy: 78, r: 2.8, fill: '#F4E9D5'},
+        {cx: 68, cy: 78, r: 2.8, fill: '#E6C78E'},
         {cx: 88, cy: 79, r: 3.6, fill: '#8F2233'},
-        {cx: 108, cy: 76, r: 2.8, fill: '#F4E9D5'},
+        {cx: 108, cy: 76, r: 2.8, fill: '#E6C78E'},
         {cx: 128, cy: 68, r: 3.4, fill: '#D99B38'},
-        {cx: 168, cy: 66, r: 2.6, fill: '#F4E9D5'},
+        {cx: 168, cy: 66, r: 2.6, fill: '#E6C78E'},
         {cx: 184, cy: 70, r: 3.2, fill: '#D99B38'},
-        {cx: 198, cy: 66, r: 2.6, fill: '#F4E9D5'},
-        {cx: 222, cy: 66, r: 2.6, fill: '#F4E9D5'},
+        {cx: 198, cy: 66, r: 2.6, fill: '#E6C78E'},
+        {cx: 222, cy: 66, r: 2.6, fill: '#E6C78E'},
         {cx: 236, cy: 70, r: 3.2, fill: '#D99B38'},
-        {cx: 252, cy: 66, r: 2.6, fill: '#F4E9D5'},
+        {cx: 252, cy: 66, r: 2.6, fill: '#E6C78E'},
         {cx: 292, cy: 68, r: 3.4, fill: '#D99B38'},
-        {cx: 312, cy: 76, r: 2.8, fill: '#F4E9D5'},
+        {cx: 312, cy: 76, r: 2.8, fill: '#E6C78E'},
         {cx: 332, cy: 79, r: 3.6, fill: '#8F2233'},
-        {cx: 352, cy: 78, r: 2.8, fill: '#F4E9D5'},
+        {cx: 352, cy: 78, r: 2.8, fill: '#E6C78E'},
         {cx: 372, cy: 73, r: 3.4, fill: '#D99B38'},
       ].map((bead, idx) => (
         <circle

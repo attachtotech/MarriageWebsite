@@ -146,22 +146,22 @@ export const Hero: React.FC<HeroProps> = ({readyToAnimate}) => {
 
       <div
         ref={innerFrameRef}
-        className="pointer-events-none absolute inset-4 sm:inset-7 lg:inset-9 border border-[#E2C287]/55 will-change-transform"
+        className="pointer-events-none absolute inset-4 sm:inset-7 lg:inset-10 border border-[#E2C287]/55 will-change-transform"
         aria-hidden="true"
       >
-        <CornerFlourish position="tl" className="absolute -top-1 -left-1 w-8 h-8 sm:w-10 sm:h-10 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
-        <CornerFlourish position="tr" className="absolute -top-1 -right-1 w-8 h-8 sm:w-10 sm:h-10 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
-        <CornerFlourish position="bl" className="absolute -bottom-1 -left-1 w-8 h-8 sm:w-10 sm:h-10 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
-        <CornerFlourish position="br" className="absolute -bottom-1 -right-1 w-8 h-8 sm:w-10 sm:h-10 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
+        <CornerFlourish position="tl" className="absolute -top-1 -left-1 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
+        <CornerFlourish position="tr" className="absolute -top-1 -right-1 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
+        <CornerFlourish position="bl" className="absolute -bottom-1 -left-1 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
+        <CornerFlourish position="br" className="absolute -bottom-1 -right-1 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#E6C78E]/95 drop-shadow-[0_2px_8px_rgba(20,6,11,0.85)]" />
       </div>
 
       <div
         ref={contentRef}
-        className="relative z-10 max-w-2xl mx-auto px-6 sm:px-8 py-20 text-center flex flex-col items-center will-change-transform"
+        className="relative z-10 max-w-2xl md:max-w-3xl mx-auto px-6 sm:px-8 py-20 md:py-24 text-center flex flex-col items-center will-change-transform"
       >
         <p
           data-hero-kicker
-          className="font-body italic type-subheading text-[#FFF6E8] tracking-wide mb-2.5 drop-shadow-[0_2px_12px_rgba(18,5,10,0.95)]"
+          className="font-body italic type-subheading text-[#FFF6E8] tracking-wide mb-2.5 md:mb-3.5 drop-shadow-[0_2px_12px_rgba(18,5,10,0.95)]"
         >
           {weddingConfig.introduction}
         </p>
@@ -174,20 +174,20 @@ export const Hero: React.FC<HeroProps> = ({readyToAnimate}) => {
           <WeddingLogo variant="light" size="xl" />
         </h1>
 
-        <div data-hero-reveal className="w-full max-w-[200px] my-4 drop-shadow-[0_2px_10px_rgba(18,5,10,0.9)]">
+        <div data-hero-reveal className="w-full max-w-[200px] md:max-w-[260px] my-4 md:my-5 drop-shadow-[0_2px_10px_rgba(18,5,10,0.9)]">
           <OrnamentalDivider variant="gold" />
         </div>
 
         <p
           data-hero-reveal
-          className="font-body type-subheading text-[#FFF6E8] max-w-md text-balance drop-shadow-[0_2px_14px_rgba(18,5,10,0.95)]"
+          className="font-body type-subheading text-[#FFF6E8] max-w-md md:max-w-xl text-balance drop-shadow-[0_2px_14px_rgba(18,5,10,0.95)]"
         >
           {weddingConfig.heroMessage}
         </p>
 
         <p
           data-hero-reveal
-          className="mt-4 font-ui type-label uppercase text-[#F0D39A] drop-shadow-[0_2px_12px_rgba(18,5,10,0.95)]"
+          className="mt-4 md:mt-5 font-ui type-label uppercase text-[#F0D39A] drop-shadow-[0_2px_12px_rgba(18,5,10,0.95)]"
         >
           {weddingConfig.displayDate} · {weddingConfig.weddingLocation}
         </p>
@@ -195,13 +195,13 @@ export const Hero: React.FC<HeroProps> = ({readyToAnimate}) => {
 
       <div
         ref={indicatorRef}
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5"
+        className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5"
         aria-hidden="true"
       >
-        <span className="font-ui text-[10px] tracking-[0.24em] uppercase text-[#F0D39A] drop-shadow-[0_2px_8px_rgba(18,5,10,0.95)]">
+        <span className="font-ui text-[10px] md:text-xs tracking-[0.24em] uppercase text-[#F0D39A] drop-shadow-[0_2px_8px_rgba(18,5,10,0.95)]">
           Scroll
         </span>
-        <span className="w-px h-5 bg-gradient-to-b from-[#F0D39A] to-transparent" />
+        <span className="w-px h-5 md:h-7 bg-gradient-to-b from-[#F0D39A] to-transparent" />
       </div>
     </section>
   );

@@ -132,41 +132,41 @@ export const Ceremonies: React.FC = () => {
     <section
       id="ceremonies"
       ref={sectionRef}
-      className="relative bg-[#30121D] text-[#F4E9D5] py-14 sm:py-20 px-5 sm:px-8 paper-grain overflow-hidden"
+      className="relative bg-[#30121D] text-[#F4E9D5] py-14 sm:py-20 md:py-24 px-5 sm:px-8 paper-grain overflow-hidden"
     >
       <div
-        className="pointer-events-none absolute inset-4 sm:inset-6 border border-[#C6A36A]/25"
+        className="pointer-events-none absolute inset-4 sm:inset-6 md:inset-8 border border-[#C6A36A]/25"
         aria-hidden="true"
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <div ref={headingRef} className="text-center max-w-lg mx-auto mb-10 sm:mb-12">
+      <div className="relative z-10 max-w-4xl lg:max-w-5xl mx-auto">
+        <div ref={headingRef} className="text-center max-w-lg md:max-w-xl mx-auto mb-10 sm:mb-12 md:mb-14">
           <h2 className="font-display type-section font-medium text-[#F7F0E5]">
             The Ceremonies
           </h2>
           <OrnamentalDivider className="my-3.5" variant="gold" />
         </div>
 
-        <div className="space-y-8 sm:space-y-10">
+        <div className="space-y-8 sm:space-y-10 md:space-y-12">
           {featuredCeremonies.map((ceremony, idx) => {
             const reverse = idx % 2 === 1;
             return (
               <article
                 key={ceremony.id}
                 data-ceremony-block
-                className="relative bg-[#421724]/85 border border-[#C6A36A]/45 p-4 sm:p-7"
+                className="relative bg-[#421724]/85 border border-[#C6A36A]/45 p-4 sm:p-7 md:p-9"
               >
                 <CornerFlourish
                   position="tl"
-                  className="pointer-events-none absolute top-1.5 left-1.5 w-6 h-6 text-[#D9BD8B]/60"
+                  className="pointer-events-none absolute top-1.5 left-1.5 w-6 h-6 md:w-8 md:h-8 text-[#D9BD8B]/60"
                 />
                 <CornerFlourish
                   position="br"
-                  className="pointer-events-none absolute bottom-1.5 right-1.5 w-6 h-6 text-[#D9BD8B]/60"
+                  className="pointer-events-none absolute bottom-1.5 right-1.5 w-6 h-6 md:w-8 md:h-8 text-[#D9BD8B]/60"
                 />
 
                 <div
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center ${
+                  className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center ${
                     reverse ? 'lg:[&>*:first-child]:order-2' : ''
                   }`}
                 >
@@ -188,9 +188,9 @@ export const Ceremonies: React.FC = () => {
                   </div>
 
                   <div data-ceremony-copy className="lg:col-span-6 flex flex-col justify-center">
-                    <div className="flex items-center gap-2.5 text-[#D9BD8B] mb-1.5">
-                      <EventMotifIllustration motif={ceremony.motif} className="w-8 h-8 shrink-0" />
-                      <span className="font-ui text-[10px] tracking-[0.2em] uppercase text-[#D9BD8B]">
+                    <div className="flex items-center gap-2.5 md:gap-3 text-[#D9BD8B] mb-1.5 md:mb-2">
+                      <EventMotifIllustration motif={ceremony.motif} className="w-8 h-8 md:w-10 md:h-10 shrink-0" />
+                      <span className="font-ui text-[10px] md:text-xs tracking-[0.2em] uppercase text-[#D9BD8B]">
                         {ceremony.dayLabel}
                       </span>
                     </div>
@@ -198,17 +198,17 @@ export const Ceremonies: React.FC = () => {
                     <h3 className="font-display type-section font-medium text-[#F7F0E5]">
                       {ceremony.name}
                     </h3>
-                    <p className="font-body italic text-sm sm:text-base text-[#D9BD8B] mt-0.5 mb-3">
+                    <p className="font-body italic text-sm sm:text-base md:text-lg text-[#D9BD8B] mt-0.5 mb-3 md:mb-4">
                       {ceremony.subtitle}
                     </p>
 
-                    <p className="font-body type-body text-[#F4E9D5]/90 mb-4">
+                    <p className="font-body type-body text-[#F4E9D5]/90 mb-4 md:mb-5">
                       {ceremony.description}
                     </p>
 
-                    <dl className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-3.5 border-t border-[#C6A36A]/30 text-sm">
+                    <dl className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 md:gap-3.5 pt-3.5 md:pt-4 border-t border-[#C6A36A]/30 text-sm md:text-base">
                       <div>
-                        <dt className="font-ui text-[10px] tracking-[0.18em] uppercase text-[#D9BD8B]/80">
+                        <dt className="font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase text-[#D9BD8B]/80">
                           Date &amp; Time
                         </dt>
                         <dd className="mt-0.5 font-body type-body text-[#F7F0E5]">
@@ -216,7 +216,7 @@ export const Ceremonies: React.FC = () => {
                         </dd>
                       </div>
                       <div>
-                        <dt className="font-ui text-[10px] tracking-[0.18em] uppercase text-[#D9BD8B]/80">
+                        <dt className="font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase text-[#D9BD8B]/80">
                           Venue
                         </dt>
                         <dd className="mt-0.5 font-body type-body text-[#F7F0E5]">
@@ -224,7 +224,7 @@ export const Ceremonies: React.FC = () => {
                         </dd>
                       </div>
                       <div className="sm:col-span-2">
-                        <dt className="font-ui text-[10px] tracking-[0.18em] uppercase text-[#D9BD8B]/80">
+                        <dt className="font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase text-[#D9BD8B]/80">
                           Attire
                         </dt>
                         <dd className="mt-0.5 font-body italic type-body text-[#F4E9D5]/85">

@@ -44,14 +44,14 @@ export const WeddingLogo: React.FC<WeddingLogoProps> = ({
 
   const sizeClass =
     size === 'xs'
-      ? 'w-11 h-8 sm:w-12 sm:h-9'
+      ? 'w-11 h-8 sm:w-12 sm:h-9 md:w-14 md:h-10'
       : size === 'sm'
-        ? 'w-14 h-10 sm:w-16 sm:h-11'
+        ? 'w-14 h-10 sm:w-16 sm:h-11 md:w-18 md:h-13'
         : size === 'md'
-          ? 'w-24 h-16 sm:w-28 sm:h-18'
+          ? 'w-24 h-16 sm:w-28 sm:h-18 md:w-32 md:h-21 lg:w-36 lg:h-24'
           : size === 'lg'
-            ? 'w-32 h-22 sm:w-40 sm:h-26'
-            : 'w-40 h-26 sm:w-52 sm:h-34';
+            ? 'w-32 h-22 sm:w-40 sm:h-26 md:w-48 md:h-32 lg:w-52 lg:h-34'
+            : 'w-40 h-26 sm:w-52 sm:h-34 md:w-64 md:h-42 lg:w-76 lg:h-48';
 
   return (
     <span

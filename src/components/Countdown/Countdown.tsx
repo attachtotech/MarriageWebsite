@@ -50,14 +50,14 @@ export const Countdown: React.FC = () => {
     <div
       ref={containerRef}
       aria-label="Countdown to the wedding"
-      className="grid grid-cols-4 gap-2 sm:gap-6 max-w-sm mx-auto py-3.5 border-y border-[#C59A52]/40"
+      className="grid grid-cols-4 gap-2 sm:gap-6 md:gap-8 max-w-sm md:max-w-lg mx-auto py-3.5 md:py-4 border-y border-[#C59A52]/40"
     >
       {units.map((unit) => (
         <div key={unit.label} data-countdown-unit className="flex flex-col items-center">
-          <span className="font-display text-xl sm:text-3xl font-medium text-[#651E2B] tabular-nums leading-none">
+          <span className="font-display text-xl sm:text-3xl md:text-4xl lg:text-[2.65rem] font-medium text-[#651E2B] tabular-nums leading-none">
             {String(unit.value).padStart(2, '0')}
           </span>
-          <span className="mt-1.5 font-ui text-[10px] tracking-[0.18em] uppercase text-[#352720]/70">
+          <span className="mt-1.5 font-ui text-[10px] md:text-xs tracking-[0.18em] uppercase text-[#352720]/70">
             {unit.label}
           </span>
         </div>

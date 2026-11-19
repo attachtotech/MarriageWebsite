@@ -89,7 +89,7 @@ export const Navigation: React.FC<NavigationProps> = ({onNavigate}) => {
             : 'bg-gradient-to-b from-[#1F1016]/70 to-transparent text-[#F4E9D5]'
         }`}
       >
-        <div className="max-w-5xl mx-auto px-5 sm:px-8 h-14 sm:h-16 flex items-center justify-between gap-6">
+        <div className="max-w-5xl lg:max-w-6xl mx-auto px-5 sm:px-8 h-14 sm:h-16 md:h-18 lg:h-20 flex items-center justify-between gap-6">
           <a
             href="#hero"
             onClick={(e) => {
@@ -104,7 +104,7 @@ export const Navigation: React.FC<NavigationProps> = ({onNavigate}) => {
 
           <nav
             aria-label="Wedding sections"
-            className="hidden md:flex items-center gap-6 font-ui text-[11px] tracking-[0.18em] uppercase"
+            className="hidden md:flex items-center gap-6 md:gap-8 lg:gap-10 font-ui text-[11px] md:text-xs lg:text-[13px] tracking-[0.18em] uppercase"
           >
             {NAV_LINKS.map((link) => (
               <a
@@ -125,7 +125,7 @@ export const Navigation: React.FC<NavigationProps> = ({onNavigate}) => {
             <button
               type="button"
               onClick={() => handleLinkClick('rsvp')}
-              className={`min-h-[34px] px-3.5 py-1 font-ui text-[10px] tracking-[0.2em] uppercase border transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
+              className={`min-h-[34px] md:min-h-[40px] px-3.5 py-1 md:px-5 md:py-1.5 font-ui text-[10px] md:text-xs tracking-[0.2em] uppercase border transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                 scrolled
                   ? 'bg-[#30121D] text-[#F4E9D5] border-[#C6A36A] hover:bg-[#421724]'
                   : 'bg-[#30121D]/65 text-[#F4E9D5] border-[#D9BD8B]/70 hover:bg-[#421724]'

@@ -120,7 +120,11 @@ export const WeddingPage: React.FC = () => {
   }, [handleBackToTop]);
 
   return (
-    <div className="min-h-screen bg-[#F7F0E5] text-[#352720] selection:bg-[#30121D] selection:text-[#F4E9D5]">
+    <div
+      className={`min-h-screen selection:bg-[#30121D] selection:text-[#F4E9D5] ${
+        introOpen ? 'bg-[#30121D] text-[#F4E9D5]' : 'bg-[#F7F0E5] text-[#352720]'
+      }`}
+    >
       <InvitationIntro
         isOpen={introOpen}
         onRevealWebsite={handleRevealWebsite}

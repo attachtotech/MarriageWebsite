@@ -75,17 +75,17 @@ export const InvitationScroll: React.FC = () => {
     <section
       id="invitation-scroll"
       ref={sectionRef}
-      className="relative bg-[#F2EBDD] text-[#352720] py-12 sm:py-18 px-5 sm:px-8 overflow-hidden paper-grain"
+      className="relative bg-[#F2EBDD] text-[#352720] py-12 sm:py-18 md:py-20 lg:py-24 px-5 sm:px-8 overflow-hidden paper-grain"
     >
-      <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-4xl lg:max-w-5xl mx-auto">
         <div className="relative flex items-center justify-center">
           <div ref={leftFinialRef} className="relative z-20 shrink-0 -mr-2 sm:-mr-2.5">
-            <ScrollFinial side="left" className="w-6 h-32 sm:w-9 sm:h-44 drop-shadow-sm" />
+            <ScrollFinial side="left" className="w-6 h-32 sm:w-9 sm:h-44 md:w-11 md:h-52 lg:w-12 lg:h-56 drop-shadow-sm" />
           </div>
 
           <div
             ref={ribbonRef}
-            className="relative flex-1 bg-gradient-to-b from-[#30121D] via-[#421724] to-[#30121D] text-[#F4E9D5] border-y-2 border-[#C6A36A] px-5 sm:px-10 py-7 sm:py-10 shadow-md overflow-hidden paper-grain"
+            className="relative flex-1 bg-gradient-to-b from-[#30121D] via-[#421724] to-[#30121D] text-[#F4E9D5] border-y-2 border-[#C6A36A] px-5 sm:px-10 md:px-14 py-7 sm:py-10 md:py-12 lg:py-14 shadow-md overflow-hidden paper-grain"
           >
             <div
               className="pointer-events-none absolute inset-x-2 inset-y-1.5 border-y border-[#D9BD8B]/40"
@@ -93,18 +93,18 @@ export const InvitationScroll: React.FC = () => {
             />
 
             <div className="relative z-10 flex flex-col items-center text-center">
-              <div ref={centerCrestRef} className="text-[#D9BD8B] mb-2.5">
-                <LotusMedallion className="w-9 h-9 sm:w-11 sm:h-11" />
+              <div ref={centerCrestRef} className="text-[#D9BD8B] mb-2.5 md:mb-3.5">
+                <LotusMedallion className="w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13" />
               </div>
 
-              <div ref={copyRef} className="max-w-lg mx-auto">
-                <p className="font-ui text-[10px] sm:text-[11px] tracking-[0.24em] uppercase text-[#D9BD8B] mb-1.5">
+              <div ref={copyRef} className="max-w-lg md:max-w-2xl mx-auto">
+                <p className="font-ui text-[10px] sm:text-[11px] md:text-xs lg:text-[13px] tracking-[0.24em] uppercase text-[#D9BD8B] mb-1.5 md:mb-2.5">
                   {weddingConfig.invitationTitle}
                 </p>
                 <h2 className="font-display italic type-section font-normal text-[#F7F0E5] leading-snug text-balance">
                   “{weddingConfig.sanskritTranslation}”
                 </h2>
-                <p className="mt-3 font-body type-body tracking-wide text-[#D9BD8B]/90">
+                <p className="mt-3 md:mt-4 font-body type-body tracking-wide text-[#D9BD8B]/90">
                   {weddingConfig.brideName} &amp; {weddingConfig.groomName} · {weddingConfig.displayDate}
                 </p>
               </div>
@@ -112,7 +112,7 @@ export const InvitationScroll: React.FC = () => {
           </div>
 
           <div ref={rightFinialRef} className="relative z-20 shrink-0 -ml-2 sm:-ml-2.5">
-            <ScrollFinial side="right" className="w-6 h-32 sm:w-9 sm:h-44 drop-shadow-sm" />
+            <ScrollFinial side="right" className="w-6 h-32 sm:w-9 sm:h-44 md:w-11 md:h-52 lg:w-12 lg:h-56 drop-shadow-sm" />
           </div>
         </div>
       </div>
